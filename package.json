@@ -1,0 +1,24 @@
+{
+  "name": "expo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/*.html",
+    "sass": "sass --watch sass/main.scss:src/css/styles.css",
+    "sass:email": "sass --watch sass/email.scss:src/css/mail.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.5.1",
+    "velocity-animate": "^1.5.2",
+    "velocityjs": "^2.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10",
+    "typescript": "^4.0.2"
+  }
+}

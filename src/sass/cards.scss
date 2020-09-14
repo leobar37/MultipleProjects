@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+$font-sans: "Roboto", sans-serif;
+$light: 300;
+$regular: 400;
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: $font-sans;
+  background-color: #5b6abf;
+}
+.box_container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100vh;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". navbar navbar navbar"
+    "sidemenu cards cards cards" "sidemenu cards cards cards"
+    "sidemenu cards cards cards";
+}
+.navbar {
+  width: 100%;
+  color: white;
+  grid-area: navbar;
+  align-items: center;
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: row;
+  justify-content: space-around;
+  h3 {
+    letter-spacing: 25px;
+  }
+
+  ul {
+    list-style: none;
+    i {
+      color: white;
+      font-size: 1rem;
+    }
+    li {
+      font-size: 1rem;
+      display: inline-block;
+      padding: 0.2rem 0.4rem;
+    }
+  }
+}
+.sidemenu {
+  padding-top: 3rem;
+  grid-area: sidemenu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: wheat;
+
+  ul {
+    h3 {
+      margin-bottom: 1.3rem;
+      font-size: 1rem;
+      text-align: left;
+      font-weight: $regular;
+      width: 100%;
+    }
+    margin-top: 1.5rem;
+    list-style: none;
+    li {
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 1.2rem 0.2rem;
+    }
+  }
+}
+.cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  .box {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    width: 250px;
+    min-height: 290px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      height: 60%;
+      width: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    .info {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      h3,
+      p {
+        padding: 0.5rem 1rem;
+        text-align: left;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .detail {
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: left;
+        display: flex;
+
+        h3 {
+          padding: 0;
+        }
+        span {
+          $color: rgba(black, 0.3);
+          margin-left: 30%;
+          border: 2px solid $color;
+          padding: 0.2rem 0.5rem;
+          border-radius: 10%;
+          color: $color;
+        }
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+      }
+    }
+  }
+}

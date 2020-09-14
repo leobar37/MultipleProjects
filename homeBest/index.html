@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <title>hello parcel</title>
+  </head>
+  <body>
+    <nav class="nav-list">
+      <li><a class="nav-links" href="./index.html">Home</a></li>
+      <li><a class="nav-links" href="./about.html">About</a></li>
+      <li><a class="nav-links" href="">Contact</a></li>
+    </nav>
+    <main data-router-wrapper>
+      <section data-router-view="home" class="home">
+        <div class="home-content">
+          <div class="home-presentation">
+            <h1>samless transtion</h1>
+            <p>beautiful transition between pages</p>
+          </div>
+          <figure class="img">
+            <img
+              class="img"
+              src="https://static.wixstatic.com/media/541fdc_77d58e4fe2bb4a0f88b0858096599021~mv2_d_2674_3000_s_4_2.png/v1/fill/w_387,h_428,al_c,q_85,usm_0.66_1.00_0.01/29619556_xl_edited.webp"
+              alt=""
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script src="ts/index.ts"></script>
+  </body>
+</html>

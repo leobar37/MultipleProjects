@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+}
+@mixin gradient($color) {
+  @if ($color == true) {
+    color: rgb(7, 86, 162);
+    color: linear-gradient(
+      90deg,
+      rgb(96, 97, 99) 0%,
+      rgba(7, 86, 162, 1) 35%,
+      rgba(0, 212, 255, 1) 97%
+    );
+  } @else {
+    background: rgb(7, 86, 162);
+    background: linear-gradient(
+      90deg,
+      rgb(96, 97, 99) 0%,
+      rgba(7, 86, 162, 1) 35%,
+      rgba(0, 212, 255, 1) 97%
+    );
+  }
+}
+
+.text {
+  @include gradient(false);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 4.5em;
+  &.litle {
+    font-style: italic;
+    font-size: 2rem !important;
+  }
+}
+header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+
+  .parrafo {
+    font-size: 1.2em;
+  }
+}
+main {
+  background: #bdb2ff;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+  li {
+    font-size: 1.3rem;
+    margin: 1.2rem 0.2rem;
+  }
+}
